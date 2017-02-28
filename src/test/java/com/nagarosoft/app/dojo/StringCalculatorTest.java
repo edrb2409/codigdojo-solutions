@@ -45,10 +45,10 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void shouldNotSupportNegatives() {
-		StringCalculator.add("1,-1");
-		
 		thrown.expect(RuntimeException.class);
 		thrown.expectMessage("negatives not allowed: -1");
+		
+		StringCalculator.add("1,-1");
 	}
 	
 	@Test
