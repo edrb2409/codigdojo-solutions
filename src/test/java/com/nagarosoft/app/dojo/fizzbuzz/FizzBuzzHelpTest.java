@@ -1,6 +1,8 @@
-package com.nagarosoft.app.dojo;
+package com.nagarosoft.app.dojo.fizzbuzz;
 
 import static org.junit.Assert.*;
+
+import com.nagarosoft.app.dojo.fizzbuzz.FizzBuzz;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -8,7 +10,7 @@ import static org.hamcrest.CoreMatchers.*;
 /**
  * Created by edrb on 5/12/17.
  */
-public class FizzBuzzTest {
+public class FizzBuzzHelpTest {
 
     @Test
     public void shouldPrintTheNumberIfNumberIsNotMultipleOfThreeNeitherFive(){

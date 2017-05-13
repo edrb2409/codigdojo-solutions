@@ -1,4 +1,4 @@
-package com.nagarosoft.app.dojo;
+package com.nagarosoft.app.dojo.fizzbuzz;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -8,12 +8,21 @@ import java.util.stream.IntStream;
  */
 public class FizzBuzz {
 
-    public static void main(String[] args) {
-        System.out.println("[" + IntStream.rangeClosed(1, 100)
-                .boxed()
-                .map(Helper::convert)
-                .collect(Collectors.joining(",")) + "]");
-    }
+    private int _limit;
+
+   public FizzBuzz limit(int aLimit) {
+       _limit = aLimit;
+       return this;
+   }
+
+   public String print() {
+       return "[" + IntStream
+               .rangeClosed(1, _limit)
+               .boxed()
+               .map(Helper::convert)
+               .collect(Collectors.joining(",")) + "]";
+   }
+
 
     public static class Helper {
 
