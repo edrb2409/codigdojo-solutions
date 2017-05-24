@@ -2,7 +2,6 @@ package com.nagarosoft.app.dojo.fizzbuzz;
 
 import static org.junit.Assert.*;
 
-import com.nagarosoft.app.dojo.fizzbuzz.FizzBuzz;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -30,6 +29,11 @@ public class FizzBuzzHelpTest {
     @Test
     public void shouldReturnFizzBuzzIfNumberIsMultipleOfFiveANDThree() {
         assertThat(FizzBuzz.Helper.convert(15), is("FizzBuzz"));
+    }
+
+    @Test
+    public void shouldReturnZeroIfNumberIsZero() {
+        assertThat(FizzBuzz.Helper.convert(0), is("0"));
     }
 
 }

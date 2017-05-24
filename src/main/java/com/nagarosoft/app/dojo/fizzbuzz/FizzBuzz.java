@@ -27,6 +27,8 @@ public class FizzBuzz {
     public static class Helper {
 
         public static String convert(int number) {
+            if(number == 0) return "0";
+
             if(isFizzBuzz(number)) return "FizzBuzz";
 
             if(isFizz(number)) return "Fizz";
