@@ -1,18 +1,13 @@
 package com.nagarosoft.app.dojo;
 
-import static org.junit.Assert.*;
-
-import org.junit.Rule;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.*;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class StringCalculatorTest {
 
-	@Rule
-	public ExpectedException thrown = ExpectedException.none();
-	
 	@Test
 	public void shouldReturnZeroWhenIsEmptyString() {
 		assertThat(StringCalculator.add(""), is(0));
@@ -45,12 +40,11 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void shouldNotSupportNegatives() {
-		thrown.expect(RuntimeException.class);
-		thrown.expectMessage("negatives not allowed: -1");
-		
-		StringCalculator.add("1,-1");
+		Assertions.assertThrows(RuntimeException.class,
+				() -> StringCalculator.add("1,-1"),
+				"negatives not allowed: -1");
 	}
-	
+
 	@Test
 	public void shouldIgnoreNumbersBiggerThan1000() {
 		assertThat(StringCalculator.add("1,2,7,10005"), is(10));

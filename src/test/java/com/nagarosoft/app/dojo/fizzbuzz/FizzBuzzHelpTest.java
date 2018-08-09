@@ -1,10 +1,9 @@
 package com.nagarosoft.app.dojo.fizzbuzz;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * Created by edrb on 5/12/17.

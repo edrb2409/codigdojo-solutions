@@ -7,3 +7,4 @@ bin/
 /.gradle/
 *.iml
 .idea/
+out/
